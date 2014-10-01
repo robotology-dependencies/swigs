@@ -9,7 +9,7 @@ swig_base="$PWD/build/swigs"
 mkdir -p $swig_base
 
 if [ ! -e swig ]; then
-    git clone https://github.com/swig/swig
+    git clone --depth=50 https://github.com/swig/swig
     cd swig
 else
     cd swig

@@ -1,1 +1,5 @@
+before_install:
+  - sudo apt-get update -qq
+install:
+  - sudo apt-get install yodl
 script: "./compile.sh"
