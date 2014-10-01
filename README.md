@@ -1,4 +1,4 @@
 swigs
 =====
 
-compile many versions of swig to test bindings
+Compile many versions of [swig](http://swig.org/) to test bindings.
