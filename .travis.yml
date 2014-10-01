@@ -1,5 +1,12 @@
 before_install:
-  - sudo apt-get update -qq
+- sudo apt-get update -qq
 install:
-  - sudo apt-get install yodl
-script: "./compile.sh"
+- sudo apt-get install yodl
+script: ./compile.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: L/6SW9cEMtHJHA3+Z3vApcRSF0B6MBSUgCyMRk94+5RoToZuJesvJKX7v5nOzbkbUUWMWlnwJtJH9xrw20ckvAsTc4Le7ZLl6hCYiiH8kzSO0b7OCEeVLzr/T5EKdDvEeSxXUSXkvukpEKSr2jpHwfC0Fy3pvF6cqn8F7vjM+i0=
+  file: build/swigs.zip
+  on:
+    repo: paulfitz/swigs
