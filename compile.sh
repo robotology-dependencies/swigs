@@ -20,7 +20,7 @@ if [ ! -e swig.spec.in ]; then
 fi
 
 
-default_swig_versions="$(git for-each-ref --format="%(refname)" refs/tags/rel-*.*.* | sed 's|refs/tags/rel-||' | sort -V | grep -v "1.3.32\|1.3.33\|1.3.34\|1.3.35\|1.3.36\|beta")"
+default_swig_versions="$(git for-each-ref --format="%(refname:lstrip=2)" refs/tags/rel-*.*.* | sed 's/rel-//' |grep -v "^1\|^2\|beta" | sort -V)"
 
 if [ -z "$SWIG_VERSIONS" ]; then
     swig_versions="$default_swig_versions"
